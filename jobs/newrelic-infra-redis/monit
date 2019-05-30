@@ -1,0 +1,5 @@
+check process newrelic-infra-redis
+  with pidfile /var/vcap/sys/run/newrelic-infra-redis/newrelic-infra-redis.pid
+  start program "/var/vcap/jobs/newrelic-infra-redis/bin/monit_debugger newrelic-infra_ctl '/var/vcap/jobs/newrelic-infra-redis/bin/newrelic-infra_ctl start'"
+  stop program "/var/vcap/jobs/newrelic-infra-redis/bin/monit_debugger newrelic-infra_ctl '/var/vcap/jobs/newrelic-infra-redis/bin/newrelic-infra_ctl stop'"
+  group vcap

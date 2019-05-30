@@ -1,0 +1,7 @@
+---
+name: newrelic-infra-rabbitmq
+
+dependencies:
+
+files:
+- newrelic-infra-rabbitmq.tar.gz

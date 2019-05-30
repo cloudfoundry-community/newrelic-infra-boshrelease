@@ -1,0 +1,24 @@
+integration_name: com.newrelic.rabbitmq
+
+instances:
+  - name: <%= properties.newrelic.rabbitmq.env %>
+    command: "all"
+    arguments:
+      hostname: <%= properties.newrelic.rabbitmq.hostname %>
+      port: 15672
+      username: <%= properties.newrelic.rabbitmq.username %>
+      password: <%= properties.newrelic.rabbitmq.password %>
+      #ca_bundle_dir: <ca bundle directory>
+      #ca_bundle_file: <ca bundle file>
+      #node_name_override: <local node name>
+      #config_path: /var/vcap/jobs/rabbitmq-haproxy/haproxy.config
+      #use_ssl: <bool>
+      #queues: *
+      #queues_regexes: *
+      #exchanges: *
+      #exchanges_regexes: *
+      #vhosts: *
+      #vhosts_regexes: *
+    labels:
+      env: <%= properties.newrelic.rabbitmq.env %>
+      role: rabbitmq

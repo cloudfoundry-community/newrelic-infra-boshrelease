@@ -1,0 +1,19 @@
+<%
+  # If the Vault config was passed in use it as is and exit
+  if_p("newrelic.vault_url") do |vault_url|
+    vault_url.gsub!('(index)', spec.index.to_s)
+    vault_url.gsub!('(ip)', spec.ip)
+%>
+integration_name: com.org.vaultstatus
+
+instances:
+  - name: vaultstatus-metrics
+    command: metrics
+    arguments:
+      VAULT_URL: <%= vault_url %>/v1/sys/health
+
+  - name: vaultstatus-inventory
+    command: inventory
+    arguments:
+      VAULT_URL: <%= vault_url %>/v1/sys/health
+<% end %>

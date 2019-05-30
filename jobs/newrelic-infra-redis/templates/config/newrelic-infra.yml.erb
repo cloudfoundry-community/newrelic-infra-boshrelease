@@ -1,0 +1,64 @@
+#
+# New Relic Infrastructure Monitor configuration file.
+#
+
+#
+# Option : license_key
+# Value  : 40-character hexadecimal string provided by New Relic. This is
+#          the only required value in your config file.
+# Default: none
+#
+license_key: <%= p("newrelic.license_key") %>
+
+
+
+
+<%
+deployment_name = properties.newrelic.deployment_tag
+if deployment_name.to_s.empty?
+  deployment_name = spec.deployment
+end
+%>
+
+# Option : display_name
+# Value  : Hostname to replace the automatically generated hostname for
+#          reporting.
+# Default: Automatically generated hostname
+#
+#display_name: new_name
+
+<% if properties.newrelic.hostname %>
+display_name: <%= properties.newrelic.hostname %>-<%= spec.index %>-<%= deployment_name %>
+<% else %>
+display_name: <%= name %>-<%= spec.index %>-<%= deployment_name %>
+<% end %>
+
+# Option : Optional custom attributes
+# Use optional key-value pairs to build filter sets, group your results,
+# annotate your Insights data, etc.
+#
+# custom_attributes:
+#   environment: production
+#   service: login service
+#   team: alpha-team
+#
+custom_attributes:
+  Deployment: <%= deployment_name %>
+
+
+#<% if properties.newrelic.proxy %>
+#proxy=<%= properties.newrelic.proxy %>
+#<% end %>
+
+
+#
+# Option : log_file
+# Value  : Full path and file name when you want to log to a location
+#          different than the default (for example, with troubleshooting).
+# Default: Typical default location for standard log files
+#
+#log_file: /temp/debug_log
+
+
+
+

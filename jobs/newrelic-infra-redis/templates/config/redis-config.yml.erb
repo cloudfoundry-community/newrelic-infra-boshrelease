@@ -1,0 +1,14 @@
+integration_name: com.newrelic.redis
+
+instances:
+  - name: redis-metrics
+    command: metrics
+    arguments:
+      hostname: <%= spec.ip %>
+      port: 6379
+
+  - name: redis-inventory
+    command: inventory
+    arguments:
+      hostname: <%= spec.ip %>
+      port: 6379

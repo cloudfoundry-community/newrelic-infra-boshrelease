@@ -1,0 +1,17 @@
+name: com.org.vaultstatus
+description: Reports status and metrics for vault
+protocol_version: 1
+os: linux
+
+commands:
+  metrics:
+    command:
+      - ./vaultstatus
+      - --metrics
+    interval: 90
+
+  inventory:
+    command:
+      - ./vaultstatus
+      - --inventory
+    interval: 90

@@ -1,0 +1,5 @@
+check process newrelic-infra-rabbitmq
+  with pidfile /var/vcap/sys/run/newrelic-infra-rabbitmq/newrelic-infra-rabbitmq.pid
+  start program "/var/vcap/jobs/newrelic-infra-rabbitmq/bin/monit_debugger newrelic-infra_ctl '/var/vcap/jobs/newrelic-infra-rabbitmq/bin/newrelic-infra_ctl start'"
+  stop program "/var/vcap/jobs/newrelic-infra-rabbitmq/bin/monit_debugger newrelic-infra_ctl '/var/vcap/jobs/newrelic-infra-rabbitmq/bin/newrelic-infra_ctl stop'"
+  group vcap

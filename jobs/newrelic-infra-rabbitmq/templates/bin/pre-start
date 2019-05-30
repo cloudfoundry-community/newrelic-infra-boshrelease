@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+set -u
+
+mkdir -p /var/db/newrelic-infra/newrelic-integrations
+mkdir -p /etc/newrelic-infra/integrations.d
+cp /var/vcap/jobs/newrelic-infra-rabbitmq/config/rabbitmq-definition.yml /var/db/newrelic-infra/newrelic-integrations/
+cp /var/vcap/packages/newrelic-infra-rabbitmq/nr-rabbitmq /var/db/newrelic-infra/newrelic-integrations/
+cp /var/vcap/jobs/newrelic-infra-rabbitmq/config/rabbitmq-config.yml /etc/newrelic-infra/integrations.d/
+
+chown -R vcap:vcap /var/db/newrelic-infra
+chown -R vcap:vcap /etc/newrelic-infra

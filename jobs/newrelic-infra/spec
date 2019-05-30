@@ -1,0 +1,23 @@
+---
+name: newrelic-infra
+packages:
+- newrelic-infra
+templates:
+  bin/newrelic-infra_ctl: bin/newrelic-infra_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  config/newrelic-infra.yml.erb: config/newrelic-infra.yml
+
+properties:
+  newrelic.license_key:
+    description: "Newrelic License Key"
+  newrelic.deployment_tag:
+    description: "Optional: The deployment tag that would appear in New Relic. Leave empty to pull the deployment name from BOSH"
+  newrelic.proxy:
+    description: "http/https proxy to use to access newrelic saas. see  https://docs.newrelic.com/docs/servers/new-relic-servers-linux/installation-configuration/linux-configuration-new-relic-servers "
+    example: "fred:secret@proxy.mydomain.com:8181"
+  newrelic.hostname:
+    description: "Optional: Defines custom hostname for the node instead of using the instance name, followed by index ID and deployment tag.  Leave empty to use the instance name instead."
+    example: "postgres-dev"

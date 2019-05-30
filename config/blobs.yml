@@ -1,0 +1,16 @@
+newrelic-infra-rabbitmq.tar.gz:
+  size: 2565107
+  object_id: 2c6e8937-3fb5-4b60-4d85-99a6fb8142fa
+  sha: sha256:d9cb22e9462e2fe7d10fc5caaa9493490fca286251b669e92bb65e16e1c92c3d
+newrelic-infra-redis.tar.gz:
+  size: 1783341
+  object_id: 79ebede2-7cab-4808-6a80-4249fed60e47
+  sha: sha256:689503d36400436cef436df4ec018730e0a98a57aa17d882af41c3dd707b85f8
+newrelic-infra-vault.tar.gz:
+  size: 2257826
+  object_id: 8082a29e-76ae-4a62-7895-3539619a8108
+  sha: sha256:11372135e904df6e759fe76dfe6a1837100776358a52832f458b8d425521b208
+newrelic-infra.tar.gz:
+  size: 8701691
+  object_id: f96de5aa-4b21-4423-58c9-bd618a0e0419
+  sha: sha256:8f8ecaee52139008d506aed860b17f0b5eeb773c295f506834cd8eef9f2d14ee

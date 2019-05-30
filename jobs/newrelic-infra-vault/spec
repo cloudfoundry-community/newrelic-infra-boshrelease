@@ -1,0 +1,29 @@
+---
+name: newrelic-infra-vault
+packages:
+- newrelic-infra
+- newrelic-infra-vault
+templates:
+  bin/newrelic-infra_ctl: bin/newrelic-infra_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  bin/pre-start: bin/pre-start
+  config/newrelic-infra.yml.erb: config/newrelic-infra.yml
+  config/vaultstatus-definition.yml: config/vaultstatus-definition.yml
+  config/vaultstatus-config.yml.erb: config/vaultstatus-config.yml
+properties:
+  newrelic.license_key:
+    description: "Newrelic License Key"
+  newrelic.deployment_tag:
+    description: "Optional: The deployment tag that would appear in New Relic. Leave empty to pull the deployment name from BOSH"
+  newrelic.proxy:
+    description: "http/https proxy to use to access newrelic saas. see  https://docs.newrelic.com/docs/servers/new-relic-servers-linux/installation-configuration/linux-configuration-new-relic-servers "
+    example: "fred:secret@proxy.mydomain.com:8181"
+  newrelic.hostname:
+    description: "Optional: Defines custom hostname for the node instead of using the instance name, followed by index ID and deployment tag.  Leave empty to use the instance name instead."
+    example: "postgres-dev"
+  newrelic.vault_url:
+    description: "Necessary to complete VAULT_URL dns name automatically for each vault node. Interpolating (index) and (ip) here."
+    example: "https://vault-(index).org.com"

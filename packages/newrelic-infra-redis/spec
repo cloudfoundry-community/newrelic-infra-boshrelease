@@ -1,0 +1,5 @@
+---
+name: newrelic-infra-redis
+dependencies: []
+files:
+- newrelic-infra-redis.tar.gz
