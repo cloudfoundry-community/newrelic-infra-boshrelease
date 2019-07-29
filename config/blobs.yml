@@ -11,6 +11,6 @@ newrelic-infra-vault.tar.gz:
   object_id: 8082a29e-76ae-4a62-7895-3539619a8108
   sha: sha256:11372135e904df6e759fe76dfe6a1837100776358a52832f458b8d425521b208
 newrelic-infra.tar.gz:
-  size: 8701691
-  object_id: f96de5aa-4b21-4423-58c9-bd618a0e0419
-  sha: sha256:8f8ecaee52139008d506aed860b17f0b5eeb773c295f506834cd8eef9f2d14ee
+  size: 8702832
+  object_id: 3bc054cb-7f6b-401b-5a3a-2a5c48a488c3
+  sha: sha256:a00a4969438f39e2744c4b64ef81aa2842153ff992bce8cf5c7ad3f86a4b3006
