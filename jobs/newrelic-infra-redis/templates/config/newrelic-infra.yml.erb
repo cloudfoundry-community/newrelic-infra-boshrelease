@@ -44,7 +44,10 @@ display_name: <%= name %>-<%= spec.index %>-<%= deployment_name %>
 #
 custom_attributes:
   Deployment: <%= deployment_name %>
-
+  Bosh-Deployment: <%= spec.deployment %>
+  Bosh-Job: <%= spec.job.name %>
+  Bosh-Index: <%= spec.index %>
+  Bosh-AZ: <%= spec.az %>
 
 #<% if properties.newrelic.proxy %>
 #proxy=<%= properties.newrelic.proxy %>

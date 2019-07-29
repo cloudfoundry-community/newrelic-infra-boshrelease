@@ -8,7 +8,7 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
 
-VERSION=2.3.0.129
+VERSION=1.3.33
 tar xfv newrelic-infra.tar.gz
 
 mkdir $BOSH_INSTALL_TARGET/bin
